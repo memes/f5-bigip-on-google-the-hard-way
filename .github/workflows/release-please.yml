@@ -1,0 +1,28 @@
+# spell-checker: disable
+---
+name: release-please
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    # TODO: @memes - enable in real project
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release Please
+        uses: GoogleCloudPlatform/release-please-action@v4.0.2
+        with:
+          # TODO @memes - make sure release-type and other options are correct.
+          release-type: simple
+          # TODO @memes - If other actions are not going to be triggered by the
+          # result of this action this can be removed.
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
