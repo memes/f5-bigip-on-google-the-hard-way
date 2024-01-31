@@ -2,15 +2,3 @@
 .envrc
 .direnv
 .tool-versions
-
-# Ignore Ruby
-.bundle
-Gemfile.lock
-
-# Ignore Terraform state and automatic var files - except examples
-.terraform
-.terraform.lock.hcl
-terraform.tfstate*
-*.auto.tfvars*
-terraform.tfvars*
-!terraform.tfvars.example

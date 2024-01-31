@@ -3,12 +3,6 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - memes
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -16,12 +10,6 @@ updates:
     reviewers:
       - memes
   - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - memes
-  - package-ecosystem: "terraform"
     directory: "/"
     schedule:
       interval: "weekly"
