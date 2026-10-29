@@ -1,6 +1,7 @@
 # spell-checker: disable
 # yamllint disable rule:line-length
 ---
+version: "1.0"
 fileignoreconfig:
 - filename: .github/workflows/release.yml
   checksum: a975e764f9205155fb006fef6de943574e3d61a314f9215599590a0242ad2efc
@@ -11,4 +12,17 @@ fileignoreconfig:
 - filename: README.md
   ignore_detectors:
   - filecontent
-version: "1.0"
+- filename: .devcontainer/devcontainer-lock.json
+  checksum: ed92e49a3e9801f95bc53de62d3f3b842fd26a5d08aa4a31226b452276fa7e09
+- filename: uv.lock
+  checksum: c1ab053c9f27ea5ae677e948ad9594a2abf6eab00321895e87e4bfe688a035a5
+- filename: docs/10_prereqs.md
+  checksum: 80e1f8a5793254177b690376246a4cd388cd326bcc3363722aaf0a911ac025fb
+- filename: docs/20_create-big-ips.md
+  checksum: 2dcc8358f375e1db929618aeb11b771c0b5b28f4efa829a1cb2478d76ec7dfa5
+- filename: tests/test_whole_enchilada.py
+  checksum: 024d19a834267bf50d5669ec8d1b9716242980de5c98a3452123680a080f593c
+- filename: tests/test_shared_fixtures.py
+  checksum: bfe2208ed1d83610b0188ccb857bb61e391568a05e954644f19194931719e610
+- filename: tests/conftest.py
+  checksum: 48a5b7f50f31f68d581047ff0e55b1637da80bb007f1229528217ba2b8d9acbe

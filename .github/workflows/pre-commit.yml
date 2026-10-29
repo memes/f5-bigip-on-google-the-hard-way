@@ -1,4 +1,5 @@
-# These github actions will perform linting using pre-commit.
+# These github actions will update Terraform section(s) of README(s), and
+# perform linting using pre-commit.
 # yamllint disable rule:line-length
 # spell-checker: disable
 ---
@@ -19,12 +20,17 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: install talisman
-        run: |
-          sudo curl -sLo /usr/local/bin/talisman https://github.com/thoughtworks/talisman/releases/download/v1.32.0/talisman_linux_amd64
-          sudo chmod 0755 /usr/local/bin/talisman
-      - uses: actions/setup-python@v5
+        uses: jaxxstorm/action-install-gh-release@v1
         with:
-          python-version: '3.12'
-      - uses: pre-commit/action@v3.0.0
+          repo: thoughtworks/talisman
+          extension-matching: disable
+          rename-to: talisman
+          chmod: 0755
+      - uses: actions/setup-python@v6
+        with:
+          python-version-file: ".python-version"
+      - uses: astral-sh/setup-uv@v7
+      - run: uv sync --locked --all-extras --dev
+      - run: uv run pre-commit run --show-diff-on-failure --all-files

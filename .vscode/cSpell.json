@@ -1,32 +1,31 @@
 {
-    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
     "version": "0.2",
     "language": "en",
     "words": [
-        "direnv",
-        "DOCKERHUB",
-        "envrc",
-        "fileignoreconfig",
-        "goarch",
-        "gofumpt",
-        "golangci",
-        "gomod",
-        "goreleaser",
-        "hadolint",
-        "hashicorp",
-        "incpatch",
-        "ldflags",
-        "markdownlint",
-        "opencontainers",
-        "pastebin",
-        "thumbsup",
-        "trimpath",
-        "venv",
-        "wontfix",
-        "workdir",
-        "yamllint"
+        "BYOL",
+        "configsync",
+        "gbps",
+        "hostspec",
+        "mcpd",
+        "PAYG",
+        "preemptible",
+        "prereqs",
+        "publickey",
+        "subnetwork",
+        "subnetworks",
+        "testinfra",
+        "tmsh",
+        "VIRTIO"
     ],
     "flagWords": [
         "hte"
+    ],
+    "ignorePaths": [
+        ".devcontainer/devcontainer.json",
+        ".devcontainer/Dockerfile",
+        ".gitignore",
+        ".pre-commit-config.yaml",
+        "uv.lock",
+        "reset_management_interface.sh"
     ]
 }

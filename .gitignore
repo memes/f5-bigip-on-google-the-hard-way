@@ -1,4 +1,15 @@
-# Ignore my direnv setup
+# Ignore my direnv/dotenv setup
 .envrc
 .direnv
 .tool-versions
+.env
+!.env.example
+
+# Ignore python and testing files
+.venv
+__pycache__
+.pytest_cache
+.coverage*
+
+# Ignore CA bundle
+.devcontainer/*pem
