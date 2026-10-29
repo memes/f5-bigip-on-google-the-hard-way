@@ -28,7 +28,7 @@ jobs:
           extension-matching: disable
           rename-to: talisman
           chmod: 0755
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version-file: ".python-version"
       - uses: astral-sh/setup-uv@v7
