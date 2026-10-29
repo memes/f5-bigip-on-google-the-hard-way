@@ -1,0 +1,52 @@
+{
+    "name": "memes-f5-bigip-on-google-the-hard-way",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers-extra/features/direnv:1": {},
+        "ghcr.io/memes/devcontainers-features/google-cloud-cli:1": {},
+        "ghcr.io/memes/devcontainers-features/talisman:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.vscode-yaml",
+                "streetsidesoftware.code-spell-checker",
+                "tamasfe.even-better-toml",
+                "esbenp.prettier-vscode",
+                "DavidAnson.vscode-markdownlint",
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-python.vscode-python-envs",
+                "charliermarsh.ruff",
+                "astral-sh.ty"
+            ]
+        }
+    },
+    "onCreateCommand": {
+        "install-deps": "sudo sh -c 'apt update && apt install -y --no-install-recommends fzf shellcheck && rm -rf /var/lib/apt/lists/*'",
+        "install-uv": ["/usr/local/py-utils/bin/pipx", "install", "uv"],
+        "install-numpy": "PIP_REQUIRE_VIRTUALENV=false /usr/local/bin/python3 -m pip install numpy",
+        "modify-default-omz-plugins": ["/usr/bin/sed", "-i.onCreateCommand" , "-e", "/^plugins=/c\\plugins=(git dotenv)", "/home/vscode/.zshrc"]
+    },
+    "updateContentCommand": {
+        "uv-sync": "uv sync --all-extras --all-packages && uv run pre-commit install --hook-type commit-msg --hook-type pre-commit"
+    },
+    "containerUser": "vscode",
+    "containerEnv": {
+        "UV_LINK_MODE": "copy",
+        // TODO(@memes): Workaround for uv sync and docker/macOS/virtiofs issue
+        // "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv",
+        "CLOUDSDK_CORE_CUSTOM_CA_CERTS_FILE": "/etc/ssl/certs/ca-certificates.crt",
+        "GRPC_DEFAULT_SSL_ROOTS_FILE_PATH": "/etc/ssl/certs/ca-certificates.crt",
+        "REQUESTS_CA_BUNDLE": "/etc/ssl/certs/ca-certificates.crt",
+        "SSL_CERT_FILE": "/etc/ssl/certs/ca-certificates.crt",
+        "CLOUDSDK_PYTHON_SITEPACKAGES": "1"
+    },
+    "updateRemoteUserUID": true,
+    "mounts": [
+        "source=${localEnv:HOME}/.config/gcloud,target=/home/vscode/.config/gcloud,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ]
+}

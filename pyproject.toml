@@ -1,0 +1,68 @@
+[project]
+name = "f5-bigip-on-google-the-hard-way"
+version = "0.1.0"
+description = "Add your description here"
+# spell-checker: disable
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cryptography>=50.0.2",
+    "google-cloud-compute>=1.54.0",
+    "google-cloud-iam>=2.25.0",
+    "google-cloud-iap>=1.23.0",
+    "mistune>=3.3.4",
+    "pytest-cov>=7.1.0",
+    "pytest-testinfra[paramiko,ssh]>=10.2.2",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "ruff>=0.16.9",
+    "ty>=0.0.84",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = ["CPY001"]
+select = ["ALL"]
+extend-select = ["I"]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.per-file-ignores]
+# Allow assert and don't complain about implicit namespaces for tests.
+"**/tests/**/*" = ["S", "INP", "PLR0913", "PLR0917"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.coverage.paths]
+source = ["tests"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.pytest]
+addopts = [
+    "--cov=tests",
+    "--cov-report=term-missing",
+]
+log_cli = true
+log_cli_level = "WARNING"
+log_cli_format = "%(asctime)s - %(levelname)s:%(name)s:%s(message)"
+log_cli_date_format = "%Y-%m-%dT%H:%M:%S%z"
+testpaths = ["tests"]
+filterwarnings = [
+    "error",
+    "ignore::urllib3.exceptions.InsecureRequestWarning",
+    "ignore:unclosed database in <sqlite3.Connection:ResourceWarning",
+]
