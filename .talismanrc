@@ -16,3 +16,7 @@ fileignoreconfig:
   checksum: ed92e49a3e9801f95bc53de62d3f3b842fd26a5d08aa4a31226b452276fa7e09
 - filename: uv.lock
   checksum: c1ab053c9f27ea5ae677e948ad9594a2abf6eab00321895e87e4bfe688a035a5
+- filename: docs/10_prereqs.md
+  checksum: 80e1f8a5793254177b690376246a4cd388cd326bcc3363722aaf0a911ac025fb
+- filename: docs/20_create-big-ips.md
+  checksum: 2dcc8358f375e1db929618aeb11b771c0b5b28f4efa829a1cb2478d76ec7dfa5
