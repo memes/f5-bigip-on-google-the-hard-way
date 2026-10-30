@@ -7,6 +7,7 @@
         "ghcr.io/devcontainers/features/docker-in-docker:4": {
             "moby": false
         },
+        "ghcr.io/devcontainers/features/node:2": {},
         "ghcr.io/devcontainers-extra/features/direnv:1": {},
         "ghcr.io/memes/devcontainers-features/google-cloud-cli:1": {},
         "ghcr.io/memes/devcontainers-features/talisman:1": {}
