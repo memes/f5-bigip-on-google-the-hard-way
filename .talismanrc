@@ -13,7 +13,7 @@ fileignoreconfig:
   ignore_detectors:
   - filecontent
 - filename: .devcontainer/devcontainer-lock.json
-  checksum: ed92e49a3e9801f95bc53de62d3f3b842fd26a5d08aa4a31226b452276fa7e09
+  checksum: e5ea14b38d99a999843059745aff1d69d82c7d91b07e4184e38942a0b9ec9c8f
 - filename: uv.lock
   checksum: c1ab053c9f27ea5ae677e948ad9594a2abf6eab00321895e87e4bfe688a035a5
 - filename: docs/10_prereqs.md

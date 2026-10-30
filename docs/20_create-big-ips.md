@@ -21,17 +21,19 @@ gcloud compute images list \
     --format 'table(name:sort=1:reverse)'
 ```
 
-As of September 30th 2026, this command finds a few of BIG-IP v21.1 VE images that match requirements:
+As of October 29th 2026, this command finds a few of BIG-IP v21.1 VE images that match requirements:
 
 ```text
 NAME
+f5-bigip-21-1-0-4-0-0-3-payg-good-1gbps-261023033836
+f5-bigip-21-1-0-3-0-0-20-payg-good-1gbps-261009084121
 f5-bigip-21-1-0-2-0-35-22-payg-good-1gbps-260923101645
 f5-bigip-21-1-0-2-0-0-22-payg-good-1gbps-260824081116
 f5-bigip-21-1-0-1-0-0-26-payg-good-1gbps-260714080018
 f5-bigip-21-1-0-0-0-payg-good-1gbps-260504135337
 ```
 
-For the remainder of this tutorial we'll use `f5-bigip-21-1-0-2-0-35-22-payg-good-1gbps-260923101645` as it is the most
+For the remainder of this tutorial we'll use `f5-bigip-21-1-0-4-0-0-3-payg-good-1gbps-261023033836` as it is the most
 recent published BIG-IP VE version meeting the licensing and throughput requirements.
 
 ## Choose your BIG-IP deployment zone(s)
@@ -75,7 +77,7 @@ gcloud compute instances create bigip-the-hard-way-01 \
     --metadata "block-project-ssh-keys=true,ssh-keys=admin:${BIG_IP_PUBKEY}" \
     --service-account "bigip-the-hard-way@my-project.iam.gserviceaccount.com" \
     --scopes https://www.googleapis.com/auth/cloud-platform \
-    --create-disk auto-delete=yes,boot=yes,mode=rw,size=100,type=pd-balanced,image=projects/f5-7626-networks-public/global/images/f5-bigip-21-1-0-2-0-35-22-payg-good-1gbps-260923101645
+    --create-disk auto-delete=yes,boot=yes,mode=rw,size=100,type=pd-balanced,image=projects/f5-7626-networks-public/global/images/f5-bigip-21-1-0-4-0-0-3-payg-good-1gbps-261023033836
 ```
 <!-- markdownlint-enable line-length -->
 
@@ -108,7 +110,7 @@ gcloud compute instances create bigip-the-hard-way-02 \
     --metadata "block-project-ssh-keys=true,ssh-keys=admin:${BIG_IP_PUBKEY}" \
     --service-account "bigip-the-hard-way@my-project.iam.gserviceaccount.com" \
     --scopes https://www.googleapis.com/auth/cloud-platform \
-    --create-disk auto-delete=yes,boot=yes,mode=rw,size=100,type=pd-balanced,image=projects/f5-7626-networks-public/global/images/f5-bigip-21-1-0-2-0-35-22-payg-good-1gbps-260923101645
+    --create-disk auto-delete=yes,boot=yes,mode=rw,size=100,type=pd-balanced,image=projects/f5-7626-networks-public/global/images/f5-bigip-21-1-0-4-0-0-3-payg-good-1gbps-261023033836
 ```
 <!-- markdownlint-enable line-length -->
 
