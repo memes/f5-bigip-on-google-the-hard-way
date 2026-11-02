@@ -29,10 +29,10 @@ lead to a failure case.
 
 ## Steps
 
-1. [Prerequisites](docs/10_prereqs.md)
-1. [Create BIG-IP instances](docs/20_create-big-ips.md)
-1. [Establish HA](docs/30_establish-ha.md)
-1. [Clean up resources](docs/99_cleanup.md)
+1. [Prerequisites](cli/10_prereqs.md)
+1. [Create BIG-IP instances](cli/20_create-big-ips.md)
+1. [Establish HA](cli/30_establish-ha.md)
+1. [Clean up resources](cli/99_cleanup.md)
 
 [kubernetes the hard way]: https://github.com/kelseyhightower/kubernetes-the-hard-way/
 [BIG-IP HA]: https://github.com/f5devcentral/terraform-google-f5-bigip-ha
