@@ -533,7 +533,7 @@ wheels = [
 
 [[package]]
 name = "google-cloud-compute"
-version = "1.54.0"
+version = "1.58.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-api-core", extra = ["grpc"] },
@@ -542,9 +542,9 @@ dependencies = [
     { name = "proto-plus" },
     { name = "protobuf" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2a/36/e467fefd6ea440497260b113652ee4ced649fb9b81c7b6ce29caa85dab16/google_cloud_compute-1.54.0.tar.gz", hash = "sha256:75be7d3a9d58c286f7d0b567a2fc4fb3f451fa665338c731e61b12b331487be1", size = 5308548, upload-time = "2026-09-17T20:30:20.889Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7f/54/5d2d1bd98db24e62dbc10fed58b799a9b30d8ecc155828e4b71ff0c3e6a0/google_cloud_compute-1.58.0.tar.gz", hash = "sha256:2fe9e1fce90de5d2b5f5ace9e9be7ef334af6f39e50e5ff63a8650577a1268e4", size = 5501231, upload-time = "2026-11-12T14:23:08.974Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/dd/f2/91009dbafe1c65a4fef3661a788e2b3046bd7208a50d05a28aa01a6a5633/google_cloud_compute-1.54.0-py3-none-any.whl", hash = "sha256:e44c074ad77c1312a2fdac2f2aece36b80f98fe3dc6cdcf8fdfaabcee5c1cb0a", size = 4087275, upload-time = "2026-09-17T20:29:47.841Z" },
+    { url = "https://files.pythonhosted.org/packages/71/ce/e604251c8d76e7810300821aaf7f7e05c9d6bbf7c0f3fc1af3bd580e1ee2/google_cloud_compute-1.58.0-py3-none-any.whl", hash = "sha256:e0b4e0c0cce79b1dda0c5f2f633704009307ff1768959755d4f22caa8c18e641", size = 4189175, upload-time = "2026-11-12T14:22:18.836Z" },
 ]
 
 [[package]]
