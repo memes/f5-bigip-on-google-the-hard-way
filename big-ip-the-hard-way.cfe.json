@@ -1,0 +1,20 @@
+{
+  "class": "Cloud_Failover",
+  "environment": "gcp",
+  "controls": {
+    "class": "Controls",
+    "logLevel": "silly"
+  },
+  "externalStorage": {
+    "scopingTags": {
+      "f5_cloud_failover_label": "big-ip-the-hard-way"
+    }
+  },
+  "failoverAddresses": {
+    "enabled": true,
+    "requireTags": true,
+    "scopingTags": {
+      "f5_cloud_failover_label": "big-ip-the-hard-way"
+    }
+  }
+}
