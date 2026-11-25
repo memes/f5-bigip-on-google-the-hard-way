@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/memes/f5-bigip-on-google-the-hard-way/compare/v0.1.1...v0.1.2) (2026-11-25)
+
+
+### Bug Fixes
+
+* Provisioning files used in CLI and Web flows ([338247f](https://github.com/memes/f5-bigip-on-google-the-hard-way/commit/338247f282d3ca43f407e5824e02441f5cd17c9e))
+
 ## [0.1.1](https://github.com/memes/f5-bigip-on-google-the-hard-way/compare/v0.1.0...v0.1.1) (2026-11-01)
 
 
