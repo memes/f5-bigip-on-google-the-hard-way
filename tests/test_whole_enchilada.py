@@ -41,12 +41,12 @@ def provision_resources(
     """Extract all individual shell commands from the markdown files, with clean up after use."""
     yield from execute_shell_commands(
         create_paths=[
-            pathlib.Path("docs/10_prereqs.md"),
-            pathlib.Path("docs/20_create-big-ips.md"),
-            pathlib.Path("docs/30_establish-ha.md"),
+            pathlib.Path("cli/10_prereqs.md"),
+            pathlib.Path("cli/20_create-big-ips.md"),
+            pathlib.Path("cli/30_establish-ha.md"),
         ],
         destroy_paths=[
-            pathlib.Path("docs/99_cleanup.md"),
+            pathlib.Path("cli/99_cleanup.md"),
         ],
         env={
             "BIG_IP_PUBKEY": ssh_public_key.decode(encoding="utf-8"),
